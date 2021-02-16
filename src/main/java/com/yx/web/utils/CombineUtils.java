@@ -15,27 +15,6 @@ import com.yx.web.xkset.XkSetBean;
 
 
 public class CombineUtils {
-	/** 
-	 * 组合选择 
-	 * @param dataList 待选列表 
-	 * @param dataIndex 待选开始索引 
-	 * @param resultList 前面（resultIndex-1）个的组合结果 
-	 * @param resultIndex 选择索引，从0开始 
-	 */ 
-	private static void combinationSelect(String[] dataList, int dataIndex, String[] resultList, int resultIndex) {  
-	    int resultLen = resultList.length;  
-	    int resultCount = resultIndex + 1;  
-	    if (resultCount > resultLen) { // 全部选择完时，输出组合结果  
-	        System.out.println(Arrays.asList(resultList));  
-	        return;  
-	    }  
-	  
-	    // 递归选择下一个  
-	    for (int i = dataIndex; i < dataList.length + resultCount - resultLen; i++) {  
-	        resultList[resultIndex] = dataList[i];  
-	        combinationSelect(dataList, i + 1, resultList, resultIndex + 1);  
-	    }  
-	}  
 	/**
 	 * 生成组合结果
 	 * @param giveArr 要选择元素的数组
