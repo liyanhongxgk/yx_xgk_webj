@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>table模块快速使用</title>
+<link rel="stylesheet" th:href="@{/layui/css/layui.css}">
+<script th:src="@{/layui/layui.js}"></script>
+</head>
+<body>
+	<table id="tabe" lay-filter="test"></table>
+
+	<script>
+		layui.use('table', function() {
+			var table = layui.table;
+
+			//第一个实例
+			table.render({
+				elem : '#"tabe"',
+				height : 312,
+				url : '/major/getSubjectList', //数据接口
+				page : true, //开启分页
+				cols : [{
+					field : 'id',
+					title : 'ID',
+					width : 80,
+					sort : true,
+					fixed : 'left'
+				}, {
+					field : 'name',
+					title : '科目名称',
+					width : 80
+				} ]
+			});
+
+		});
+	</script>
+</body>
+</html>

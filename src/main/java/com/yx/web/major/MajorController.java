@@ -18,7 +18,6 @@ public class MajorController {
 	
 	@RequestMapping("/toViewSubjectList")
 	public String toViewSubjectList() {
-		System.err.println("科目列表");
 		return "base/subjects";
 	}
 	
@@ -29,7 +28,7 @@ public class MajorController {
 		List<Map<String, Object>> list = majorDao.getSubjectList();
 		map.put("code", 0);
 		map.put("msg", "");
-		map.put("count",10);
+		map.put("count",list==null?0:list.size());
 		map.put("data", list);
 		return map;
 	}
