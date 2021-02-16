@@ -1,15 +1,18 @@
 package com.yx.web.xkset;
-
+/**
+ * 选科设置对象
+ * @author xiaog
+ *
+ */
 public class XkSetBean {
 	private int setId;
 	private Integer setName;
 	private String descriptions;
-	private String pGivenIds;
-	private String aGivenIds;
-	private String pGivenId;
+	private String pGivenIds;//首选科目主键
+	private String aGivenIds;//再选科目主键
 	private String pGivenNames;
 	private String aGivenNames;
-	private String givenIds;
+	private String givenIds;//选择的科目主键
 	private String givenNames;
 	private int pMustSelectNum;
 	private int aMustSelectNum;
@@ -51,12 +54,6 @@ public class XkSetBean {
 	}
 	public void setaGivenIds(String aGivenIds) {
 		this.aGivenIds = aGivenIds;
-	}
-	public String getpGivenId() {
-		return pGivenId;
-	}
-	public void setpGivenId(String pGivenId) {
-		this.pGivenId = pGivenId;
 	}
 	public String getpGivenNames() {
 		return pGivenNames;
