@@ -8,7 +8,6 @@ import java.util.Stack;
 
 import org.apache.commons.lang.StringUtils;
 
-import com.fasterxml.jackson.annotation.JsonTypeInfo.Id;
 import com.yx.web.xkset.XkSetBean;
 
 
@@ -193,10 +192,26 @@ public class CombineUtils {
 		return list;
 	}
 	/**
-	 * 生成可能的组合数  根据给定科目要求
+	 * 生成必选科目组合 分情况讨论
+	 * @param xkSetBean  选科设置给定的科目选择
+	 * @param pSubs 选科需求给定的首选科目
+	 * @param pSubsCount 选科需求给定的首选科目必选数
+	 * @param aSubs 选科需求给定的再选科目
+	 * @param aSubsCount 选科需求给定的再选科目必选数
+	 * @param subs 选科需求给定的科目
+	 * @param subsCount 选科需求给定的科目必选数
 	 */
-	public static void createPosibleSelectSubCombine() {
+	public static void createPosibleSelectSubCombine(XkSetBean xkSetBean,String pSubs,
+			int pSubsCount,String aSubs,int aSubsCount,String subs,int subsCount){
+		//得到首选科目  
 		
+	}
+	/**
+	 * 元素排序  
+	 * @param subjectList 排序后的科目  按照此科目排序，分情况讨论  
+	 */
+	public void sortElement(List<Map<String, Object>> subjectList) {
+		//
 	}
 	/**
 	 * 生成所有的选科组合  根据选科设置生成
